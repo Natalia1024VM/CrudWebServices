@@ -16,7 +16,9 @@ namespace PruebaTecnica.Controllers
     public class AutenticacionController : ControllerBase
     {
         private readonly string secret;
+        
         //metodo de autenticacion
+        
         public AutenticacionController(IConfiguration configuration)
         {
             secret = configuration.GetSection("settings").GetSection("SECRET_KEY").ToString();
